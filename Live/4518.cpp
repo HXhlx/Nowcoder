@@ -9,7 +9,7 @@ public:
         // write code here
         ListNode *p1 = headA, *p2 = headB;
         wint_t len1 = 500, len2 = 500;
-        for (wint_t l = 0; p1 != p2 && l <= len1 + len2; ++l)
+        for (wint_t l = 0; p1 != p2 && l < len1 + len2 - 1; ++l)
         {
             if (p1)
                 p1 = p1->next;

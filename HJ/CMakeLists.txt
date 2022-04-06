@@ -1,7 +1,5 @@
-project("HJ")
 aux_source_directory(. hj)
 foreach(T_FILE_NAME ${hj})
-    string(REGEX REPLACE ".cpp" "" EXECUTABLE_NAME ${T_FILE_NAME})
-    string(REGEX REPLACE "\.\/" "" EXECUTABLE_NAME ${EXECUTABLE_NAME})
+    string(REGEX REPLACE "\./(.+)\.cpp" "\\1" EXECUTABLE_NAME ${T_FILE_NAME})
     add_executable(${EXECUTABLE_NAME} ${T_FILE_NAME})
 endforeach()
